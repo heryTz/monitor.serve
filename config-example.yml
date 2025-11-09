@@ -1,0 +1,13 @@
+notifiers:
+  mail:
+    enabled: true
+    smtp_host: smtp.example.com
+    smtp_port: 587
+    smtp_user: user
+    smtp_password: password
+    smtp_crypto: ssl
+    destinations:
+      - name: User 1
+        email: user1@yopmail.fr
+      - name: User 2
+        email: user2@yopmail.fr
