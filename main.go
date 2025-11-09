@@ -88,7 +88,11 @@ func main() {
 		if notify {
 
 			var tableBody string
-			var procsToNotify = infos[0:10]
+			end := len(infos)
+			if end > 10 {
+				end = 10
+			}
+			var procsToNotify = infos[:end]
 			for _, p := range procsToNotify {
 				tableBody = fmt.Sprintf("%s<tr><td>%d</td><td>%s</td><td>%.2f%%</td><td>%.2f%%</td></tr>", tableBody, p.PID, p.Name, p.CPU, p.Mem)
 			}
