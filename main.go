@@ -70,7 +70,7 @@ func main() {
 			cpu, _ := p.CPUPercent()
 			name, _ := p.Name()
 			mem, _ := p.MemoryPercent()
-			if cpu > 1 {
+			if cpu > 60 {
 				notify = true
 				infos = append(infos, ProcInfo{
 					PID:  p.Pid,
